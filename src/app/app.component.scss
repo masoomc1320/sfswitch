@@ -1,0 +1,65 @@
+.page {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 12px;
+}
+
+h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.toolbar button {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  background: #f3f3f3;
+  cursor: pointer;
+}
+
+.toolbar button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.toolbar input {
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.msg {
+  margin: 8px 0;
+}
+
+.msg.error {
+  color: #b00020;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table th {
+  background: #f7f7f7;
+}
+

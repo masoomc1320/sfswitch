@@ -1,0 +1,56 @@
+<div class="page">
+  <h2>Account Validation Rules</h2>
+
+  <div class="toolbar">
+    <button (click)="login()">Login</button>
+    <button (click)="refresh()" [disabled]="loading">Refresh</button>
+    <button (click)="bulkStage(true)" [disabled]="loading">Enable All</button>
+    <button (click)="bulkStage(false)" [disabled]="loading">Disable All</button>
+    <button (click)="deploy()" [disabled]="loading || pendingCount === 0">
+      Deploy <span *ngIf="pendingCount > 0">({{ pendingCount }})</span>
+    </button>
+
+    <span class="spacer"></span>
+
+    <input
+      type="text"
+      [(ngModel)]="search"
+      placeholder="Search..."
+      [disabled]="loading"
+    />
+  </div>
+
+  <div class="msg error" *ngIf="authError">{{ authError }}</div>
+  <div class="msg error" *ngIf="error">{{ error.message }} {{ error.details }}</div>
+  <div class="msg" *ngIf="loading">Loading...</div>
+
+  <table class="table" *ngIf="!loading">
+    <thead>
+      <tr>
+        <th>Rule Name</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Toggle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let r of filteredRules">
+        <td>{{ r.name }}</td>
+        <td>{{ r.description || '-' }}</td>
+        <td>
+          {{ r.active ? 'Active' : 'Inactive' }}
+          <span *ngIf="r.pending"> (staged)</span>
+        </td>
+        <td>
+          <input
+            type="checkbox"
+            [checked]="(r.pendingActive ?? r.active) === true"
+            (change)="toggle(r, $any($event.target).checked)"
+            [disabled]="loading"
+          />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

@@ -1,0 +1,8 @@
+{
+  "clientId": "",
+  "consumerSecret": "",
+  "redirectUri": "http://localhost:4200",
+  "authBaseUrl": "",
+  "apiVersion": "60.0"
+}
+

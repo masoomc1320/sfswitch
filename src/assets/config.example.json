@@ -1,0 +1,8 @@
+{
+  "clientId": "YOUR_CONNECTED_APP_CONSUMER_KEY",
+  "consumerSecret": "YOUR_CONNECTED_APP_CONSUMER_SECRET",
+  "redirectUri": "http://localhost:4200",
+  "authBaseUrl": "https://login.salesforce.com",
+  "apiVersion": "60.0"
+}
+
