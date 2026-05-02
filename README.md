@@ -24,3 +24,29 @@ npm install
 npm start
 
 Frontend runs on `http://localhost:4200`.
+
+# Docker (production build)
+
+Build:
+docker build -t sf-validation-rules-frontend .
+
+Run:
+docker run --rm -p 8080:80 sf-validation-rules-frontend
+
+Then open `http://localhost:8080`.
+
+## Docker env config (recommended)
+
+The container generates `/assets/config.json` at startup from `/assets/config.template.json`.
+
+Example (PowerShell):
+
+```powershell
+docker run --rm -p 8080:80 `
+  -e SF_CLIENT_ID="..." `
+  -e SF_CONSUMER_SECRET="..." `
+  -e SF_AUTH_BASE_URL="https://YOUR_DOMAIN.my.salesforce.com" `
+  -e SF_REDIRECT_URI="http://localhost:8080" `
+  -e SF_API_VERSION="60.0" `
+  sf-validation-rules-frontend
+```

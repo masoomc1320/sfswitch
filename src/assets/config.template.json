@@ -1,0 +1,8 @@
+{
+  "clientId": "${SF_CLIENT_ID}",
+  "consumerSecret": "${SF_CONSUMER_SECRET}",
+  "redirectUri": "${SF_REDIRECT_URI}",
+  "authBaseUrl": "${SF_AUTH_BASE_URL}",
+  "apiVersion": "${SF_API_VERSION}"
+}
+
