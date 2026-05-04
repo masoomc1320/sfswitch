@@ -1,7 +1,7 @@
 {
   "clientId": "3MVG9WVXk15qiz1JqBP9Gdf.T1CPxZnBd.jjdOjKzcpsiHJL1.gGV.uYSUhR0LBr0pTXT4KUK_YUfI__Ltr49",
   "consumerSecret": "71B74C7EA1C7C408AA0397A0DF2A60645D5717799C67715022464A8455D5509A",
-  "redirectUri": "http://localhost:4200",
+  "redirectUri": "https://sfswitch.vercel.app",
   "authBaseUrl": "https://orgfarm-6963473a13-dev-ed.develop.my.salesforce.com/",
   "apiVersion": "60.0"
 }
